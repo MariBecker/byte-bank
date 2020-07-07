@@ -5,6 +5,8 @@ export class ContaCorrente {
   agencia;
   //atributo privado
   _cliente;
+  //atributo privado
+  _saldo = 0;
 
   set cliente(novoValor) {
     if (novoValor instanceof Cliente) {
@@ -12,15 +14,17 @@ export class ContaCorrente {
     }
   }
 
-  get cliente(){
-      return this._cliente;
+  get cliente() {
+    return this._cliente;
   }
 
-  //atributo privado
-  _saldo = 0;
+  get saldo() {
+    return this._saldo;
+  }
 
-  get saldo(){
-      return this._saldo;
+  constructor(cliente, agencia) {
+    this.agencia = agencia;
+    this.cliente = cliente;
   }
 
   sacar(valor) {
