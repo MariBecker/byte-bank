@@ -14,4 +14,9 @@ export class ContaCorrente extends Conta {
     let taxa = 1.1;
     return this._sacar(valor, taxa);
   }
+
+  sacar(valor) {
+    const taxa = 1.02;
+    return this._sacar(valor, taxa);
+  }
 }
